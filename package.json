@@ -1,8 +1,8 @@
 {
   "scripts":{
-    "dl-yolov4-weights": "docker run -v %cd%/models/yolov4:/downloads -it --rm alpine sh -c \"wget --no-check-certificate -P /downloads -O /downloads/yolo-obj.weights https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights\"",
-    "dl-yolov4-cfg" : "docker run -v %cd%/models/yolov4:/downloads -it --rm alpine sh -c \"wget --no-check-certificate -P /downloads -O /downloads/yolo-obj.cfg https://raw.githubusercontent.com/AlexeyAB/darknet/master/cfg/yolov4.cfg\"",
-    "dl-yolov4-names" : "docker run -v %cd%/models/yolov4:/downloads -it --rm alpine sh -c \"wget --no-check-certificate -P /downloads -O /downloads/obj.names https://raw.githubusercontent.com/AlexeyAB/darknet/master/data/coco.names\"",
+    "dl-yolov4-weights": "docker run -v %cd%/models/yolov4:/downloads -it --rm alpine:3.13.2 sh -c \"wget --no-check-certificate -P /downloads -O /downloads/yolo-obj.weights https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights\"",
+    "dl-yolov4-cfg" : "docker run -v %cd%/models/yolov4:/downloads -it --rm alpine:3.13.2 sh -c \"wget --no-check-certificate -P /downloads -O /downloads/yolo-obj.cfg https://raw.githubusercontent.com/AlexeyAB/darknet/master/cfg/yolov4.cfg\"",
+    "dl-yolov4-names" : "docker run -v %cd%/models/yolov4:/downloads -it --rm alpine:3.13.2 sh -c \"wget --no-check-certificate -P /downloads -O /downloads/obj.names https://raw.githubusercontent.com/AlexeyAB/darknet/master/data/coco.names\"",
     "dl-yolov4" : "npm run dl-yolov4-weights && npm run dl-yolov4-cfg && npm run dl-yolov4-names"
   }
 }

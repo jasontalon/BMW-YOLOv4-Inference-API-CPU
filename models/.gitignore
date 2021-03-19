@@ -1,5 +1,8 @@
 # Ignore everything in this directory
 
+#download it using 'npm run download-yolov4-weights'
+/yolov4/**.weights 
+
 # Except this file
 !.gitignore
 
